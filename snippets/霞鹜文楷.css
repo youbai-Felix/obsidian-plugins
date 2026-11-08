@@ -1,0 +1,9 @@
+/* 正文字体：霞鹜文楷（SIL OFL 开源，可免费商用）
+   界面字体、等宽字体：不设置，走 Obsidian 系统默认
+   注意：与「仓耳今楷」「方正悠宋」片段同一时间只开一个 */
+body {
+  --font-text-override: 'LXGW WenKai', '霞鹜文楷', sans-serif;
+  --bold-weight: 500;
+  --h1-weight: 500; --h2-weight: 500; --h3-weight: 500;
+  --h4-weight: 500; --h5-weight: 500; --h6-weight: 500;
+}

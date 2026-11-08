@@ -1,0 +1,9 @@
+{
+  "id": "bento-home",
+  "name": "Bento 主页",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "常驻的可视化主页：自由编辑的 Bento 网格，置顶常用笔记，集成待办、搜索、每日笔记与最近编辑。",
+  "author": "wangxinyu",
+  "isDesktopOnly": false
+}

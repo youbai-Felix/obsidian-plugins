@@ -1,0 +1,19 @@
+/* ── Zen 主题：隐藏左侧栏的边框线 ──
+   ① 侧栏与编辑器之间的 0.1px 发丝线
+      （theme.css: border-right: 0.1px solid var(--mac-sidebar-border)）
+   ② 侧栏内容左缘的 1px 缩进参考线
+      （theme.css: border-left: 1px solid var(--nav-indentation-guide-color)）
+   换回 Minimal 等其他主题时本文件无副作用，可不关闭 */
+
+/* ① */
+body:not(.is-mobile) .workspace-split.mod-left-split {
+  border-right: none !important;
+}
+
+/* ② */
+body:not(.is-mobile)
+  .workspace-split.mod-left-split
+  .workspace-tabs
+  .workspace-tab-container {
+  border-left: none !important;
+}

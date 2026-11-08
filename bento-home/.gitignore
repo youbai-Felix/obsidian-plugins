@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+
+# minttr 版权素材，不随仓库分发（见 README「树影素材」）
+leaves*.webm

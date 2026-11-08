@@ -1,0 +1,18 @@
+{
+  "name": "bento-home",
+  "version": "1.0.0",
+  "description": "Bento 主页：Obsidian 可视化主页插件",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.mjs --production",
+    "dev": "node esbuild.config.mjs --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.7.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2"
+  }
+}

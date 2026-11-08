@@ -1,0 +1,20 @@
+/* 正文字体：仓耳今楷01（试用中；商用需仓耳授权）
+   界面字体、等宽字体：不设置，走 Obsidian 系统默认
+   注意：与「霞鹜文楷」「方正悠宋」片段同一时间只开一个 */
+body {
+  --font-text-override: '仓耳今楷01', 'TsangerJinKai01', 'LXGW WenKai', '霞鹜文楷', sans-serif;
+  --bold-weight: 700;
+  --h1-weight: 700; --h2-weight: 700; --h3-weight: 700;
+  --h4-weight: 700; --h5-weight: 700; --h6-weight: 700;
+}
+
+/* 今楷只有单一字面，合成粗体不明显 → 用描边真实加厚
+   粗细可调：0.02em 委婉 / 0.025em 适中 / 0.035em 夸张 */
+strong, b, .cm-strong {
+  font-weight: 700;
+  -webkit-text-stroke: 0.025em currentColor;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  -webkit-text-stroke: 0.02em currentColor;
+}

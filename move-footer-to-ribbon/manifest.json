@@ -1,0 +1,9 @@
+{
+	"id": "move-footer-to-ribbon",
+	"name": "Move Footer to Ribbon",
+	"version": "1.0.0",
+	"minAppVersion": "1.14.0",
+	"description": "把左下角的仓库切换/帮助/设置搬进左侧功能区竖条底部",
+	"author": "wangxinyu",
+	"isDesktopOnly": true
+}

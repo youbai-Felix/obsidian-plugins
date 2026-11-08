@@ -1,0 +1,27 @@
+/* 左下角 footer 已由 ribbon 底部三个代理按钮替代。
+   不能用 display:none：仓库切换器弹菜单前会校验自身布局，
+   隐藏元素上派发的指针序列会被无视。改用移出屏幕（保留完整布局）。 */
+body.mfr-done .workspace-sidedock-vault-profile {
+	position: fixed !important;
+	left: -9999px !important;
+	bottom: 0 !important;
+}
+
+/* 修复 Minimal ribbon-vertical-expand 与核心 margin-top(--header-height) 的叠加：
+   fixed + height:100% 会把 ribbon 底部 40px 挤出窗口，底部槽位有按钮后会被裁掉。
+   top/bottom 双钉 + height:auto + margin-top 自动得出净高，恰好铺满标题栏以下 */
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-primary {
+	height: auto !important;
+}
+
+/* 仓库菜单打开期间（body.mfr-pin，main.js 里钉/解）保持 ribbon 展开态，
+   完整镜像 Minimal 的 :hover 展开规则：竖条 44px + 侧栏内容右移让位，
+   鼠标移到菜单上时竖条不再缩回 */
+body.mfr-pin.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-primary {
+	width: 44px !important;
+	flex-basis: 44px !important;
+	opacity: 1 !important;
+}
+body.mfr-pin.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-primary ~ .mod-primary-split .workspace-tab-container {
+	padding-left: 44px !important;
+}

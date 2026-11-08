@@ -1,0 +1,5 @@
+/* 隐藏 Excalidraw 画布顶部的工具栏（属性面板）
+   启用方法：设置 → 外观 → CSS 片段 → 点击刷新 → 打开本片段的开关 */
+.excalidraw .App-toolbar {
+  display: none !important;
+}

@@ -1,0 +1,17 @@
+/* 插入指示线：横跨目标行整行宽度的蓝色粗横线 */
+.ffo-indicator {
+  position: fixed;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-blue, #3b82f6);
+  pointer-events: none;
+  display: none;
+  z-index: var(--layer-modal, 100);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* 空文件夹「移入」悬停高亮 */
+.tree-item-self.ffo-drop-into {
+  background: var(--color-blue, #3b82f6);
+  color: var(--text-on-accent, #ffffff);
+}

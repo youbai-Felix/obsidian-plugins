@@ -1,0 +1,98 @@
+/* ─────────────────────────────────────────────────────────
+   stephango.com 排版复刻（for Minimal 9.x / Obsidian 1.14+）
+   网站原版参数逆向自 https://stephango.com/styles.css
+   层级映射：笔记标题 ↔ 网站 h1，#一级 ↔ 网站 h2，
+             #二级 ↔ 网站 h3，#三级 ↔ 网站 h4
+   ───────────────────────────────────────────────────────── */
+
+body {
+  /* ── 字体栈：网站原版，纯系统字体，零 webfont ── */
+  --font-interface-theme:
+    -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans",
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-text-theme:
+    -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans",
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-editor-theme:
+    -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans",
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-monospace-theme:
+    ui-monospace, SFMono-Regular, "Cascadia Code", "IBM Plex Mono",
+    "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono",
+    Menlo, Monaco, "Consolas", "Source Code Pro", monospace;
+
+  /* ── 流体正文：网站 calc(1.5rem + .25vw) = 15px + 0.25vw
+     这里以「外观设置的基准字号」代替 15px，保留你自己的大小偏好 ── */
+  --font-adaptive-normal: calc(var(--font-text-size, 16px) + 0.25vw);
+
+  /* ── 阅读栏宽：网站 37em，跟随流体字号同步缩放 ──
+     !important 用于压过 Minimal Theme Settings 插件写入 body 的 inline 静态值 */
+  --line-width: calc((var(--font-text-size, 16px) + 0.25vw) * 37) !important;
+  /* 核心编辑器栏宽走 --file-line-width（默认 700px），一并接管 */
+  --file-line-width: calc((var(--font-text-size, 16px) + 0.25vw) * 37);
+
+  /* ── 标题：网站 h1 calc(1.35em + .55vw) / lh 1.25
+     字重 500→600：中文笔画密，500 在苹方里偏虚（本地化调整，非网站参数）── */
+  --inline-title-size: calc(1.35em + 0.55vw);
+  --inline-title-weight: 600;
+  --inline-title-line-height: 1.25;
+
+  /* #一级 = 网站 h2：calc(1em + .2vw) / -0.015em（字重 500→600 中文优化） */
+  --h1-size: calc(1em + 0.2vw);
+  --h1-weight: 600;
+  --h1-letter-spacing: -0.015em;
+
+  /* #二级：略大于正文的阶梯（网站原版与正文同大，中文场景层级感不足，
+     定稿 1.1em 让二三级可区分） */
+  --h2-size: 1.1em;
+  --h2-weight: 600;
+  --h2-letter-spacing: 0em;
+
+  /* #三级：与正文同大小，靠 600 字重区分 */
+  --h3-size: 1em;
+  --h3-weight: 600;
+  --h3-letter-spacing: 0em;
+
+  /* #四级：同大小但字重轻一档（原 Minimal 默认 0.9em 比正文还小，弃用） */
+  --h4-size: 1em;
+  --h4-weight: 500;
+  --h4-letter-spacing: 0em;
+}
+
+/* 网站灰度抗锯齿——只作用于笔记正文（编辑/阅读视图），
+   不放 body 上，避免导航栏/侧边栏等 UI 字体变细 */
+.markdown-source-view,
+.markdown-reading-view {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 笔记标题字距 -0.02em（核心 inline-title 继承 h1 的 -0.015em，这里用 !important 修正） */
+.inline-title {
+  letter-spacing: -0.02em !important;
+}
+
+/* 表格等宽数字（网站 table 标签同款） */
+.markdown-rendered table,
+.markdown-source-view table,
+.table-view-table {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 网站 <mark> 高亮背景精确值 ──
+   Minimal 自带的 Flexoki 用半透明黄，网站用实色：
+   亮色 flexoki-yellow-100 / 暗色 flexoki-yellow-900
+   作用域锁 minimal-flexoki-*，换配色方案时自动失效 */
+body.theme-light.minimal-flexoki-light {
+  --hl2: #F6E2A0;
+}
+body.theme-dark.minimal-flexoki-dark {
+  --hl2: #3A2D04;
+}
+
+/* ── 有序列表：Live Preview 序号点号竖线对齐（仅对齐，不动颜色/字重/间距）── */
+.markdown-source-view .list-number {
+  display: inline-block;
+  width: 1.6em;
+  text-align: right;
+}

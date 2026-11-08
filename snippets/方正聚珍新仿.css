@@ -1,0 +1,19 @@
+/* 正文字体：方正聚珍新仿 简繁 R（单字面 10324 字，覆盖 GBK 简繁；个人非商业免费，商用需方正授权）
+   界面字体、等宽字体：不设置，走 Obsidian 系统默认
+   注意：与「方正兰亭圆」「仓耳今楷」「方正悠宋」「霞鹜文楷」片段同一时间只开一个
+   仿宋笔画细、单字面无粗体 → 加粗用描边加强；描边可调：0.025em 清秀 / 0.035em 适中 */
+body {
+  --font-text-override: '方正聚珍新仿简繁', 'FZJuZhenXinFang-R-JF', sans-serif;
+  --bold-weight: 700;
+  --h1-weight: 700; --h2-weight: 700; --h3-weight: 700;
+  --h4-weight: 700; --h5-weight: 700; --h6-weight: 700;
+}
+
+strong, b, .cm-strong {
+  font-weight: 700;
+  -webkit-text-stroke: 0.03em currentColor;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  -webkit-text-stroke: 0.028em currentColor;
+}

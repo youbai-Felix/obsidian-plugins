@@ -1,0 +1,9 @@
+{
+	"id": "stephango-theme-toggle",
+	"name": "Stephango Theme Toggle",
+	"version": "1.0.0",
+	"minAppVersion": "1.14.0",
+	"description": "在笔记右上角添加 stephango.com 风格的暗色模式切换开关",
+	"author": "wangxinyu",
+	"isDesktopOnly": false
+}

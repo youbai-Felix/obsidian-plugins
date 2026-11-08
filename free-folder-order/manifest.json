@@ -1,0 +1,9 @@
+{
+  "id": "free-folder-order",
+  "name": "Free Folder Order",
+  "version": "1.4.4",
+  "minAppVersion": "1.4.0",
+  "description": "在文件浏览器中直接拖拽，自由调整文件夹和文件的顺序（上/下边缘插入，中间区域仍是移入文件夹）",
+  "author": "wangxinyu",
+  "isDesktopOnly": false
+}

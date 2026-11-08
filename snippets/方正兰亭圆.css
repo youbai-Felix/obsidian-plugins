@@ -1,0 +1,25 @@
+/* 正文字体：方正兰亭圆 GBK（R 常规 / 中 DB / 粗 B 三个字重；个人非商业免费，商用需方正授权）
+   界面字体、等宽字体：不设置，走 Obsidian 系统默认
+   注意：与「仓耳今楷」「方正悠宋」「霞鹜文楷」片段同一时间只开一个
+   字重映射：400→常规，600→中，700→粗；想让粗体/标题更重就把这些改成 700 */
+@font-face {
+  font-family: '方正兰亭圆';
+  src: local('方正兰亭圆_GBK'), local('FZLanTingYuan-R-GBK');
+  font-weight: 400;
+}
+@font-face {
+  font-family: '方正兰亭圆';
+  src: local('方正兰亭圆_GBK_中'), local('FZLanTingYuan-DB-GBK');
+  font-weight: 600;
+}
+@font-face {
+  font-family: '方正兰亭圆';
+  src: local('方正兰亭圆_GBK_粗'), local('FZLanTingYuan-B-GBK');
+  font-weight: 700;
+}
+body {
+  --font-text-override: '方正兰亭圆', sans-serif;
+  --bold-weight: 600;
+  --h1-weight: 600; --h2-weight: 600; --h3-weight: 600;
+  --h4-weight: 600; --h5-weight: 600; --h6-weight: 600;
+}
