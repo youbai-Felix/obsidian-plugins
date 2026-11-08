@@ -16,12 +16,8 @@ done
 # CSS snippets
 rsync -a --exclude .DS_Store "$VAULT/.obsidian/snippets/" snippets/
 
-# wechat-publish Stephango 主题补丁 diff（原版备份 vs 补丁版）
-diff -u \
-  --label 'main.js（wechat-publish v1.0.0 原版）' \
-  --label 'main.js（Stephango 主题补丁版）' \
-  "$PLUGINS/wechat-publish/main.js.bak-stephango" "$PLUGINS/wechat-publish/main.js" \
-  > wechat-publish-stephango/stephango-theme.patch || true
+# wechat-publish-stephango/ 已改为纯设计文档（主题实现已进 Vibe-coding 的插件源码，
+# 重建不再丢失），无需同步。
 
 # obs-cdp 工具（源在 ~/.zcode/tmp，tmp 会被清理，以仓库为准以后改这里）
 # 若仓库版本更新，反向同步：cp obs-cdp/cdp.ts ~/.zcode/tmp/obs-cdp/cdp.ts
