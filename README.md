@@ -17,7 +17,7 @@
 |---|---|
 | [snippets/](snippets/) | CSS 片段：stephango.com 排版复刻、中文字体栈、界面微调 |
 | [obs-cdp/](obs-cdp/) | Obsidian CDP 调试助手（Deno：eval / 截图 / 合成鼠标输入） |
-| [wechat-publish-stephango/](wechat-publish-stephango/) | 「公众号发布」插件 Stephango 主题设计参数（实现已进[插件源码](https://github.com/youbai-Felix/Vibe-coding-2026-0103/tree/main/obsidian-wechat-publish)） |
+| [wechat-publish-stephango/](wechat-publish-stephango/) | 「公众号发布」插件 Stephango 主题设计参数存档（已按"只留陶笺单主题"定稿移除） |
 
 公众号相关的独立插件见 [wechat-publish](https://github.com/youbai-Felix/wechat-publish)；
 更多 AI 结对编程项目见 [Vibe-coding-2026-0103](https://github.com/youbai-Felix/Vibe-coding-2026-0103)。

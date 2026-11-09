@@ -1307,10 +1307,9 @@ body.bh-home-active .status-bar {
   display: none !important;
 }
 
-/* 主页激活时隐藏左下角 ribbon 底部的帮助/设置图标 */
-body.bh-home-active .side-dock-settings {
-  display: none;
-}
+/* 注：曾在此隐藏主页激活时的 .side-dock-settings（1.14 时代帮助/设置住在
+   ribbon 底部槽位）。1.15 起该槽位由 move-footer-to-ribbon 插件存放
+   仓库切换/帮助/设置三个常驻按钮，此规则会误伤它们，已删除（11-09）。 */
 
 /* ---------- 底部弹窗（minttr 式卡片打开） ---------- */
 

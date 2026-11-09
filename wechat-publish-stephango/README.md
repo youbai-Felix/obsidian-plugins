@@ -1,14 +1,14 @@
-# wechat-publish · Stephango 主题
+# wechat-publish · Stephango 主题（已移除，参数存档）
 
-「公众号发布」插件的 [stephango.com](https://stephango.com) 排版复刻主题。
+「公众号发布」插件曾短暂加入的 [stephango.com](https://stephango.com) 排版复刻主题。
 
-> **状态（2026-11-09）：主题已移植进插件源码**，成为正式功能：
-> [Vibe-coding-2026-0103/obsidian-wechat-publish](https://github.com/youbai-Felix/Vibe-coding-2026-0103/tree/main/obsidian-wechat-publish)
-> ——`themes.ts` 的 `stephango` 主题对象 + `converter.ts` 的渲染分支，重建构建不再丢失。
+> **状态（2026-11-09 定稿）：已移除**。用户确认插件最终只保留**陶笺单主题**
+> （内容为王），Stephango 从源码删除（Vibe-coding 提交 d077ba1，往返验证
+> revert 后构建与从未改动过的版本逐字节一致）。本目录仅存设计参数备忘，
+> 将来想恢复按此表 + [插件源码](https://github.com/youbai-Felix/Vibe-coding-2026-0103/tree/main/obsidian-wechat-publish) 的陶笺分支写法即可。
 >
-> 历史：它最初（2026-11-07）以装机产物 main.js 补丁形式存在；2026-11-08 插件从源码
-> 重建时被整体覆盖丢失；随后按本目录保留的设计参数在源码层重写。本目录不再提供
-> patch 文件，只保留设计文档。
+> 生命周期：11-07 装机产物补丁 → 11-08 被源码重建覆盖丢失 → 11-09 源码层重写
+> （离线断言 17/17、16 原主题逐字节回归无损）→ 同日按单主题定稿移除。
 
 ## 设计参数（Flexoki 纸墨配色）
 
